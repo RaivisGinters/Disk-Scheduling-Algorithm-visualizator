@@ -497,7 +497,7 @@ function clook(x, y, xAxisStart, points, multiplier) {
         }
 
         //Sort values that comes after start ascending
-        valuesAfterStart = valuesAfterStart.sort((a, b) => a - b);
+        valuesAfterStart = valuesAfterStart.sort((a, b) => b - a);
         if (valuesAfterStart[valuesAfterStart.length - 1] == "0") {
             valuesAfterStart.splice(valuesAfterStart.length - 1, 1);
         }
