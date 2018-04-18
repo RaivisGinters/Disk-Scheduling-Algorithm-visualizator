@@ -29,7 +29,20 @@ function btnVisualize_Clicked() {
     let inputNumbersString = document.getElementById('inputNumbers').value;
     let inputNumbers = inputNumbersString.split(" ");
     let inputHeadPos = document.getElementById('inputHeadPos').value;
+
+    //Remove header values from input
+    for (let i = 0; i < inputNumbers.length; i++) {
+        if (inputNumbers[i] == inputHeadPos) {
+            inputNumbers.splice(i, 1);
+        }
+    }
     inputNumbers.unshift(inputHeadPos);
+
+    //Remove dublicates
+    inputNumbers = inputNumbers.filter(function(item, pos) {
+        return inputNumbers.indexOf(item) == pos;
+    });
+
     let inputAlgorithm = selected;
 
     // Validation
@@ -202,6 +215,7 @@ window.onload = function() {
 function fcfs(x, y, xAxisStart, points, multiplier) {
     let prevPointXValue;
     let headMovementCount = 0;
+
     for(let i=0; i < points.length; i++) {
         x = xAxisStart+points[i]*multiplier;
         drawPoint(x, y, 4);
