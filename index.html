@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disk Scheduling Algorithm visualizator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="pageContainer">
+        <h1 class="page-title">Disk Scheduling Algorithm visualizator</h1>
+        <div class="inputs">
+            <div class="algorithm-input">
+                <label for="numbers">Algorithm to be used: </label>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button onclick="selectedAlgorithmChanged(this);" value="fcfs" type="button" class="btn btn-outline-primary">First Come -First Serve (FCFS)</button>
+                    <button onclick="selectedAlgorithmChanged(this);" value="sstf" type="button" class="btn btn-outline-primary">Shortest Seek Time First (SSTF)</button>
+                    <button onclick="selectedAlgorithmChanged(this);" value="scan" type="button" class="btn btn-outline-primary">Elevator (SCAN)</button>
+                    <button onclick="selectedAlgorithmChanged(this);" value="cscan" type="button" class="btn btn-outline-primary">Circular Scan (C-SCAN)</button>
+                    <button onclick="selectedAlgorithmChanged(this);" value="clook" type="button" class="btn btn-outline-primary">C-LOOK</button>
+                </div>
+            </div>
+            <div class="number-input">
+                <label for="numbers">Queue of integers seperated with spaces: </label>
+                <input type="text" name="numbers" id="inputNumbers" class="form-control" placeholder="120 10 5 25 180">
+                <br>
+            </div>
+            <div class="start-input">
+                <div>
+                    <label for="numbers">Read-write heads initial position: </label>
+                    <input type="text" name="numbers" id="inputHeadPos" class="form-control" placeholder="50">
+                </div>
+                <div class="btnVisualizeContainer">
+                    <button onclick="btnVisualize_Clicked();" id="btnVisualize" type="button" class="btn btn-primary">Visualize</button>
+                </div>
+            </div>
+            <div id="errorMessage">
+
+            </div>
+            <br>
+            </div>
+            <div class="canvas">
+                <canvas id="canvas" width="1000" height="60"></canvas>
+            </div>
+            <div id="count-output">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

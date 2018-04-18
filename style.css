@@ -1,0 +1,52 @@
+h1.page-title {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.inputs input {
+    padding-left: 4px;
+    margin-left: 5px;
+}
+
+/* .algorithm-input div.btn-group {
+    width: 500px;
+} */
+
+input#inputHeadPos {
+    display: inline;
+    width: 50px;
+}
+
+canvas#canvas {
+    margin-top: 20px;
+}
+
+div.algorithm-input {
+    margin-bottom: 10px;
+}
+
+div.start-input div {
+    display: inline;
+}
+
+div.btnVisualizeContainer{
+    float: right;
+    margin-right: 126px;
+}
+
+input#inputNumbers {
+    display: inline;
+    width: 200px;
+}
+
+div.pageContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 880px;
+}
+
+div#errorMessage {
+    margin-top: 10px;
+}
