@@ -514,7 +514,7 @@ function clook(x, y, xAxisStart, points, multiplier) {
         valuesBeforeStart = valuesBeforeStart.sort((a, b) => a - b);
 
         //Sort values that comes after start descending
-        valuesAfterStart = valuesAfterStart.sort((a, b) => b - a);
+        valuesAfterStart = valuesAfterStart.sort((a, b) => a - b);
     }
 
     let difference = 0;
